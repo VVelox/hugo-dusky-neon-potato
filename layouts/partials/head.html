@@ -40,6 +40,9 @@
   {{ .Hugo.Generator -}}
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css" />
+  <style type="text/css">
+  {{ partial "theme-colors.css" . | safeCSS }}
+  </style>
   {{- with .Site.Params.favicon }}
   <link rel='icon' type='image/x-icon' href="{{ . | absURL }}" />
   {{- end -}}
