@@ -10,12 +10,30 @@ th {
 }
 
 /* generic headers */
-h1{ color: {{ .Param "colors.h1" | default "#FF00FF" }}; }
-h2{ color: {{ .Param "colors.h2" | default "#DA70D6" }}; }
-h3{ color: {{ .Param "colors.h3" | default "#EE82EE" }}; }
-h4{ color: {{ .Param "colors.h4" | default "#8B008B" }}; }
-h5{ color: {{ .Param "colors.h5" | default "#9932CC" }}; }
-h6{ color: {{ .Param "colors.h6" | default "#800080" }}; }
+h1{
+  color: {{ .Param "colors.h1" | default "#FF00FF" }};
+  text-decoration: {{ .Param "colors.h1-decoration" | default "none" }};
+}
+h2{
+  color: {{ .Param "colors.h2" | default "#DA70D6" }};
+  text-decoration: {{ .Param "colors.h2-decoration" | default "none" }};
+}
+h3{
+  color: {{ .Param "colors.h3" | default "#EE82EE" }};
+  text-decoration: {{ .Param "colors.h3-decoration" | default "none" }};
+}
+h4{
+  color: {{ .Param "colors.h4" | default "#8B008B" }};
+  text-decoration: {{ .Param "colors.h4-decoration" | default "none" }};
+}
+h5{
+  color: {{ .Param "colors.h5" | default "#9932CC" }};
+  text-decoration: {{ .Param "colors.h5-decoration" | default "none" }};
+}
+h6{
+  color: {{ .Param "colors.h6" | default "#800080" }};
+  text-decoration: {{ .Param "colors.h6-decoration" | default "none" }};
+}
 
 /* Changes */
 #main{
