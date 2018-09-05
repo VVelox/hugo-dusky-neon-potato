@@ -35,6 +35,7 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     {{ end }}
+    {{ if not .Params.no_pagination }}
     <nav class="p-pagination c-pagination">
       <div class="c-pagination__ctrl">
         <div class="c-pagination__newer">
@@ -51,6 +52,7 @@
         </div>
       </div>
     </nav>
+    {{ end }}
     {{ partial "related.html" . }}
   </footer>
 </article>

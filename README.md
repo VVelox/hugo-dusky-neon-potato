@@ -15,6 +15,7 @@ Outrun with the power of a potato. Based on the Potato Dark theme with CSS bits 
 * Social links （most social networks available）
 * Inlined CSS for customizable colors via config.
 * Outrun inspired foreground colors on a dark background, by default.
+* Can turn of pagination.
 
 Use short code for Image Zoom.
 
@@ -41,3 +42,20 @@ $ hugo server -t dusky-neon-potato -w -D
 ```
 
 ## Configuration
+
+### Disable Pagination
+
+So lets say you have a page you don't want pagination displayed, such as "About.org",
+then you can set <code>no_pagination</code> to true in the Front Matter and it won't
+display.
+
+```
+---
+title: "About"
+date: 2018-09-02T22:41:40-05:00
+draft: false
+no_pagination = true
+---
+
+A rutting about page.
+```
