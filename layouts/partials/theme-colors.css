@@ -36,7 +36,7 @@ h6{ color: {{ .Param "colors.h6" | default "#800080" }}; }
 
 body {
     color: {{ .Param "colors.text" | default "#66FF00" }};
-    background: {{ .Param "colors.background" }};;
+    background: {{ .Param "colors.background" | default "#101010" }};;
     line-height: 1.57
     font-size: 1.0rem;
     font-family: -apple-system, BlinkMacSystemFont, YakuHanJP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
@@ -139,7 +139,7 @@ blockquote {
     margin: 0;
     padding-bottom: 8px;
     border-bottom: 1px solid currentColor;
-    color: {{ .Param "colors.p-tag-title" }};;
+    color: {{ .Param "colors.p-tag-title" | default "#FF1493" }};;
     font-size: 2.4rem
 }
 
