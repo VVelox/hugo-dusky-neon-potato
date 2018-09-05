@@ -57,38 +57,38 @@ table, th, td {
 }
 
 th {
-  background: {{ .Param "colors.th-bg" | default "#4B0082" }};
-  background: #FFF;
-  color: {{ .Param "colors.th-fg" | default "#FF143C" }};
+  background: {{ .Param "colors.th-bg" | default "#3B0072" }};
+  background-color: {{ .Param "colors.th-bg" | default "#3B0072" }};
+  color: {{ .Param "colors.th-fg" | default "#FF040C" }};
 }
 
 /* generic headers */
-h1{ color: {{ .Param "colors.h1" }}; }
-h2{ color: {{ .Param "colors.h2" }}; }
-h3{ color: {{ .Param "colors.h3" }}; }
-h4{ color: {{ .Param "colors.h4" }}; }
-h5{ color: {{ .Param "colors.h5" }}; }
-h6{ color: {{ .Param "colors.h6" }}; }
+h1{ color: {{ .Param "colors.h1" | default "#FF00FF" }}; }
+h2{ color: {{ .Param "colors.h2" | default "#DA70D6" }}; }
+h3{ color: {{ .Param "colors.h3" | default "#EE82EE" }}; }
+h4{ color: {{ .Param "colors.h4" | default "#8B008B" }}; }
+h5{ color: {{ .Param "colors.h5" | default "#9932CC" }}; }
+h6{ color: {{ .Param "colors.h6" | default "#800080" }}; }
 
 /* Changes */
 #main{
     border-radius: 0.15%;
     padding: 15px 20px;
-    background: {{ .Param "colors.background" }};
+    background: {{ .Param "colors.background" | default "#101010" }};
 }
 
 .p-title__link {
-    color: {{ .Param "colors.main" }};
+    color: {{ .Param "colors.main" | default "#FF1493" }};
 }
 
 .p-title__link:hover {
-    color: {{ .Param "colors.text" }};
+    color: {{ .Param "colors.text" | default "#66FF00" }};
 }
 
 /* Base style */
 
 body {
-    color: {{ .Param "colors.text" }};
+    color: {{ .Param "colors.text" | default "#66FF00" }};
     background: {{ .Param "colors.code-quote-bg" }};;
     line-height: 1.57
     font-size: 1.0rem;
@@ -96,19 +96,19 @@ body {
 }
 
 a {
-    color: {{ .Param "colors.text" }};
+    color: {{ .Param "colors.text" | default "#66FF00" }};
     text-decoration: none
 }
 
 a:hover {
-    color: {{ .Param "colors.main" }};
+    color: {{ .Param "colors.main" | default "#FF1493" }};
 }
 
 pre {
     display: block;
     padding: 12px;
     border-radius: 3px;
-    background-color: {{ .Param "colors.background" }};
+    background-color: {{ .Param "colors.background" | default "#101010" }};
     font-size: 1.2rem;
     word-wrap: break-word;
     overflow: auto
@@ -119,22 +119,10 @@ code {
     font-size: 1.4rem
 }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    font-size: 1.6rem
-}
-
-
-th {
-    background-color: {{ .Param "colors.background" }};;
-    font-weight: 400
-}
-
 blockquote {
     margin: 0;
     padding: 8px 12px;
-    border-left: 3px solid {{ .Param "colors.text" }}
+    border-left: 3px solid {{ .Param "colors.text" | default "#66FF00" }}
 }
 
 .c-links a {
@@ -152,13 +140,13 @@ blockquote {
     border: 1px solid;
     border-color: #555;
     border-radius: 50%;
-    color: {{ .Param "colors.main" }};
+    color: {{ .Param "colors.main" | default "#FF1493" }};
     transition: .2s
 }
 
 .c-links a:hover {
-    background: {{ .Param "colors.background" }};
-    color: {{ .Param "colors.main" }};
+    background: {{ .Param "colors.background" | default "#101010" }};
+    color: {{ .Param "colors.main" | default "#FF1493" }};
 }
 
 .c-links__icon {
@@ -168,16 +156,16 @@ blockquote {
 }
 
 .c-article__title a {
-    color: {{ .Param "colors.main" }};
+    color: {{ .Param "colors.main" | default "#FF1493" }};
 }
 
 .c-article__title a:hover {
-    color: {{ .Param "colors.text" }};
+    color: {{ .Param "colors.text" | default "#66FF00" }};
 }
 
 .c-article__summary {
     font-size: 1.4rem;
-    color: {{ .Param "colors.text" }};
+    color: {{ .Param "colors.text" | default "#66FF00" }};
     line-height: 1.57
 }
 
@@ -186,15 +174,15 @@ blockquote {
     margin: 8px 6px 0 0;
     padding: 4px;
     font-size: 1.6rem;
-    color: {{ .Param "colors.ctag" }};
+    color: {{ .Param "colors.ctag" | default "#FF00FF" }};
 }
 
 .c-tag:hover {
-    background: {{ .Param "colors.ctag-hover-bg" }};
+    background: {{ .Param "colors.ctag-hover-bg" | default "#FF1493" }};
 }
 
 .c-pagination a:hover {
-    background: {{ .Param "colors.background" }};
+    background: {{ .Param "colors.background" | default "#101010" }};
 }
 
 .p-tag-title {
@@ -216,11 +204,11 @@ blockquote {
     margin-bottom: 4rem;
     display: inline-block;
     /* NOTE: should make this its own thing, most likely */
-    border-left: 1rem solid {{ .Param "colors.background" }};
+    border-left: 1rem solid {{ .Param "colors.background" | default "#101010" }};
 }
 
 .p-menu__parent span {
-    color: {{ .Param "colors.text" }};
+    color: {{ .Param "colors.text" | default "#66FF00" }};
 }
 
 .p-author:before {
@@ -232,17 +220,17 @@ blockquote {
     margin: auto;
     text-align: center;
     font-size: 1.4rem;
-    color: {{ .Param "colors.text" }};
+    color: {{ .Param "colors.text" | default "#66FF00" }};
 }
 
 .p-screen-reader-text:hover,
 .p-screen-reader-text:active,
 .p-screen-reader-text:focus {
-    background-color: {{ .Param "colors.background" }};;
+    background-color: {{ .Param "colors.background" | default "#101010" }};;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
     clip: auto!important;
-    color: {{ .Param "colors.text" }};
+    color: {{ .Param "colors.text" | default "#66FF00" }};
     display: block;
     font-size: 14px;
     font-size: .875rem;
@@ -272,8 +260,8 @@ blockquote {
     height: 100%;
     padding: 8px;
     background-size: cover;
-    background-color: {{ .Param "colors.background" }};
-    color: {{ .Param "colors.text" }};
+    background-color: {{ .Param "colors.related-bg" | default "#101010" }};
+    color: {{ .Param "colors.related-fg" | default "#66FF00" }};
     font-weight: 400;
     font-family: Open Sans, sans-serif
 }
@@ -304,7 +292,7 @@ blockquote {
     height: 28px;
     border: none;
     border-radius: 50%;
-    background: {{ .Param "colors.background" }};
+    background: {{ .Param "colors.background" | default "#101010" }};
 }
 
 .slick-arrow:after {
@@ -318,5 +306,5 @@ blockquote {
     margin: auto;
     width: 5px;
     height: 5px;
-    border: solid {{ .Param "colors.text" }};
+    border: solid {{ .Param "colors.text" | default "#66FF00" }}; 
 }
