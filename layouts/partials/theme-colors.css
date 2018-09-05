@@ -20,18 +20,8 @@ blockquote {
   border-left: 3px solid {{ .Param "colors.text" }};
 }
 
-table {
-  margin: 1em auto;
-  border-collapse: collapse;
-}
-
 table, th, td {
-  border: 1px solid {{ .Param "colors.text" }};
-}
-
-th {
-  background: {{ .Param "colors.text" }};
-  color: {{ .Param "colors.background" }};
+  border: 1px solid {{ .Param "colors.table-border" | default "#008B8B" }};
 }
 
 .siteTitle a { color: {{ .Param "colors.main" }}; }
@@ -59,6 +49,17 @@ th {
 .terms .term a:hover {
   text-decoration: underline;
   color: {{ .Param "colors.main" }};
+}
+
+/* generic table stuff */
+table, th, td {
+  border: 1px solid {{ .Param "colors.table-border" | default "#008B8B" }};
+}
+
+th {
+  background: {{ .Param "colors.th-bg" | default "#4B0082" }};
+  background: #FFF;
+  color: {{ .Param "colors.th-fg" | default "#FF143C" }};
 }
 
 /* generic headers */
