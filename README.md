@@ -1,6 +1,6 @@
 # Potato Dark [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/surajmandalcell/potato-dark/blob/master/license.md) 
 
-Potato Dark is a modern, simple and beautiful Hugo theme.
+Outrun with the power of a potato. Based on the Potato Dark theme with CSS bits inspired by Dusk.
 
 ![screenshot](https://github.com/surajmandalcell/potato-dark/blob/master/images/screenshot.png)   
 
@@ -13,6 +13,8 @@ Potato Dark is a modern, simple and beautiful Hugo theme.
 * Modern, Simple and beautiful design
 * Medium's Image Zoom（[zoom.js](https://github.com/fat/zoom.js/))
 * Social links （most social networks available）
+* Inlined CSS for customizable colors via config.
+* Outrun inspired foreground colors on a dark background, by default.
 
 Use short code for Image Zoom.
 
@@ -27,45 +29,15 @@ cd your hugo site directory and run:
 ```shell
 $ mkdir themes
 $ cd themes
-$ git clone -b release https://github.com/surajmandalcell/potato-dark
+$ git submodule add https://github.com/VVelox/hugo-dusky-neon-potato.git dusky-neon-potato
 ```
-
-Or download it from the release branch
-
-[release](https://github.com/surajmandalcell/potato-dark/tree/release)
 
 ## Usage
 
-Use hugo's -t potato-dark or --theme=potato-dark option with hugo commands. Example:
+Use hugo's -t dusky-neon-potato or --theme=dusky-neon-potato option with hugo commands. Example:
 
 ```shell
-$ hugo server -t potato-dark -w -D
+$ hugo server -t dusky-neon-potato -w -D
 ```
 
 ## Configuration
-
-You may specify following options in `config.toml` of your site to make use of
-this theme's features.
-
-For getting started with potato dark, copy the [config.toml](https://github.com/surajmandalcell/potato-dark/blob/master/exampleSite/config.toml) file from the exampleSite directory inside Potato's repository to your site repository.
-
-```shell
-$ cp themes/potato-dark/exampleSite/config.toml .
-```
-
-Now, you can start editing this file and add your own information!
-
-## Contributing
-
-Pull requests, bug fixes and new features are welcome!
-
-To start just fork the repository and consider creating an seperate random branch so it get easier for me to test and review pushed code! thanks.
-
-<!-- ## Development
-
-1. Edit the theme or fox somthing
-2. Create a pull request and be patient -->
-
-## License
-
-Open sourced under the MIT license.
