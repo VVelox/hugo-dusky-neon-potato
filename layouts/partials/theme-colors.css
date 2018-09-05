@@ -44,7 +44,7 @@ body {
 
 a {
     color: {{ .Param "colors.text" | default "#66FF00" }};
-    text-decoration: none
+    text-decoration: underline
 }
 
 a:hover {
