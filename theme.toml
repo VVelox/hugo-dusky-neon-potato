@@ -1,11 +1,11 @@
-name = "Potato Dark"
+name = "Dusky Neon Potato"
 license = "MIT"
-licenselink = "https://github.com/surajmandalcell/potato-dark/blob/master/LICENSE.md"
-description = "Potato Dark is a modern, simple and beautiful Hugo theme"
-source_repo = "git@github.com:surajmandalcell/potato-dark.git"
-tags = ["Responsive", "Blog", "Google analytics", "Disqus", "Clean", "Tags", "Minimal", "Minimalist", "Simple", "White", "Starter"]
+licenselink = "https://raw.githubusercontent.com/VVelox/hugo-dusky-neon-potato/master/LICENSE.md"
+description = "Outrun with the power of a potato."
+source_repo = "https://github.com/VVelox/hugo-dusky-neon-potato.git"
+tags = ["Responsive", "Blog", "Google analytics", "Disqus", "Clean", "Tags", "Minimal", "Custom Themes", "Minimalist", "Simple", "Pink", "Green", "Starter", "Dark"]
 features = ["blog"]
 min_version = 0.27
 [author]
     name = "Potato Dark"
-    homepage = "https://surajmandalcell.github.com/potato-dark"
+    homepage = "https://github.com/VVelox/hugo-dusky-neon-potato"
