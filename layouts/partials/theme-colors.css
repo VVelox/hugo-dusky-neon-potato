@@ -1,56 +1,3 @@
-body {
-  background-color: {{ .Param "colors.background" }};
-  color: {{ .Param "colors.text" }};
-}
-
-a { color: {{ .Param "colors.text" }}; }
-
-pre {
-  background: {{ .Param "colors.code-quote-bg" }};
-  border: 1px solid {{ .Param "colors.text" }};
-  border-radius: 5px;
-}
-
-code {
-  background: {{ .Param "colors.code-quote-bg" }};
-}
-
-blockquote {
-  background: {{ .Param "colors.code-quote-bg" }};
-  border-left: 3px solid {{ .Param "colors.text" }};
-}
-
-table, th, td {
-  border: 1px solid {{ .Param "colors.table-border" | default "#008B8B" }};
-}
-
-.siteTitle a { color: {{ .Param "colors.main" }}; }
-
-.post .content h1{ color: {{ .Param "colors.main" }}; }
-.post .content h2{ color: {{ .Param "colors.main" }}; }
-.post .content h3{ color: {{ .Param "colors.main" }}; }
-.post .content h4{ color: {{ .Param "colors.main" }}; }
-.post .content h5{ color: {{ .Param "colors.main" }}; }
-.post .content h6{ color: {{ .Param "colors.main" }}; }
-.post .content a:hover { color: {{ .Param "colors.main" }}; }
-.social-link:hover { color: {{ .Param "colors.main" }}; }
-.nav-item-title:hover { color: {{ .Param "colors.main" }}; }
-.tag a:hover { color: {{ .Param "colors.main" }}; }
-.copyright { color: {{ .Param "colors.copyright" }} }
-.poweredby { color: {{ .Param "colors.copyright" }} }
-.poweredby a { color: {{ .Param "colors.copyright" }}; }
-.post-preview .title a{ color: {{ .Param "colors.main" }}; }
-.content-item a:hover{
-  text-decoration: underline;
-  color: {{ .Param "colors.main" }};
-}
-.post-list .title { color: {{ .Param "colors.main" }}; }
-.rmore { color: {{ .Param "colors.main" }}; }
-.terms .term a:hover {
-  text-decoration: underline;
-  color: {{ .Param "colors.main" }};
-}
-
 /* generic table stuff */
 table, th, td {
   border: 1px solid {{ .Param "colors.table-border" | default "#008B8B" }};
@@ -89,7 +36,7 @@ h6{ color: {{ .Param "colors.h6" | default "#800080" }}; }
 
 body {
     color: {{ .Param "colors.text" | default "#66FF00" }};
-    background: {{ .Param "colors.code-quote-bg" }};;
+    background: {{ .Param "colors.background" }};;
     line-height: 1.57
     font-size: 1.0rem;
     font-family: -apple-system, BlinkMacSystemFont, YakuHanJP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
@@ -117,12 +64,14 @@ pre {
 code {
     line-height: 1.8;
     font-size: 1.4rem
+    background: {{ .Param "colors.code-quote-bg" | default "#100110"}};
 }
 
 blockquote {
     margin: 0;
     padding: 8px 12px;
     border-left: 3px solid {{ .Param "colors.text" | default "#66FF00" }}
+    background: {{ .Param "colors.code-quote-bg" | default "#100100"}};
 }
 
 .c-links a {
@@ -306,5 +255,5 @@ blockquote {
     margin: auto;
     width: 5px;
     height: 5px;
-    border: solid {{ .Param "colors.text" | default "#66FF00" }}; 
+    border: solid {{ .Param "colors.text" | default "#66FF00" }};
 }
