@@ -1,4 +1,8 @@
 /*
+  This version as had the class sortable stuff commented out.
+  This means it will sort all tables.
+*/
+/*
   SortTable
   version 2
   7th April 2007
