@@ -16,6 +16,7 @@ Outrun with the power of a potato. Based on the Potato Dark theme with CSS bits 
 * Inlined CSS for customizable colors via config.
 * Outrun inspired foreground colors on a dark background, by default.
 * Can turn of pagination.
+* The ability to enable sorting of tables for pages.
 
 Use short code for Image Zoom.
 
@@ -58,4 +59,29 @@ no_pagination = true
 ---
 
 A rutting about page.
+```
+
+### Sortable Tables
+
+So lets say you want to make the tables on a page sortable, you can now do this.
+You can do this, by setting the Front Matter value "sort_tables" to true and in
+the header it will include a link to a JS script in the js dir that does this.
+
+Below is a org mode example with sortable tables.
+
+```
+---
+title: "Tables"
+date: 2018-09-02T22:41:40-05:00
+draft: false
+sort_tables: true
+---
+
+| a | b | c          | d | e |
+|---+---+------------+---+---|
+| 1 | f | 2017-03-14 |   |   |
+| 2 | b | 2018-02-14 |   |   |
+| 3 | e | 2017-03-15 | 4 |   |
+| 4 | d | 2012-03-14 |   | 3 |
+
 ```
