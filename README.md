@@ -77,11 +77,56 @@ draft: false
 sort_tables: true
 ---
 
-| a | b | c          | d | e |
-|---+---+------------+---+---|
-| 1 | f | 2017-03-14 |   |   |
-| 2 | b | 2018-02-14 |   |   |
-| 3 | e | 2017-03-15 | 4 |   |
-| 4 | d | 2012-03-14 |   | 3 |
 
+| a | b | c          | d            | e |
+|---+---+------------+--------------+---|
+| 1 | f | 2017-03-14 | 127.0.0.1    |   |
+| 2 | b | 2018-02-14 | 192.168.15.2 |   |
+| 3 | e | 2017-03-15 | 192.168.1.1  |   |
+| 4 | d | 2012-03-14 | 10.10.10.10  | 3 |
+
+```
+
+### Colors
+
+All colors stuff go under 
+
+```
+[colors]
+	#general text and background
+	text="#66FF00"
+	background="#101010"
+	# titles
+	main="#FF1493"
+
+	# headers
+	h1="#FF00FF"
+	h1-decoration="none"
+	h2="#DA70D6"
+	h2-decoration="none"
+	h3="#EE82EE"
+	h3-decoration="none"
+	h4="#8B008B"
+	h4-decoration="none"
+	h5="#9932CC"
+	h5-decoration="none"
+	h6="#800080"
+	h6-decoration="none"
+
+	# tables
+	table-border="#008B8B"
+	th-bg="#3B0072"
+	th-fg="#FF040C"
+
+	# content tags
+	ctag="#FF00FF"
+	ctag-hover-fg="#66FF00"
+	ctag-hover-bg="#101010"
+
+	# color of the tags title on that tags page
+	p-tag-title="#FF1493"
+
+	# related items(at the cottom of posts)
+	related-bg="#101010"
+	related-fg="#66FF00"
 ```

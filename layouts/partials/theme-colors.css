@@ -146,7 +146,7 @@ blockquote {
 
 .c-tag:hover {
     background: {{ .Param "colors.ctag-hover-bg" | default "#101010" }};
-    color: {{ .Param "colors.ctag-hover-bg" | default "#66FF00" }};
+    color: {{ .Param "colors.ctag-hover-fg" | default "#66FF00" }};
 }
 
 .c-pagination a:hover {
