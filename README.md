@@ -2,7 +2,7 @@
 
 Outrun with the power of a potato. Based on the Potato Dark theme with CSS bits inspired by Dusk.
 
-![screenshot](https://github.com/surajmandalcell/potato-dark/blob/master/images/screenshot.png)   
+![screenshot](https://raw.githubusercontent.com/VVelox/hugo-dusky-neon-potato/master/images/screenshot.png)
 
 ## Overview
 
