@@ -15,7 +15,7 @@ Outrun with the power of a potato. Based on the Potato Dark theme with CSS bits 
 * Social links （most social networks available）
 * Inlined CSS for customizable colors via config.
 * Outrun inspired foreground colors on a dark background, by default.
-* Can turn of pagination.
+* Can turn off pagination.
 * The ability to enable sorting of tables for pages.
 
 Use short code for Image Zoom.
