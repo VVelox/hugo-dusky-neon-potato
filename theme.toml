@@ -3,9 +3,13 @@ license = "MIT"
 licenselink = "https://raw.githubusercontent.com/VVelox/hugo-dusky-neon-potato/master/LICENSE.md"
 description = "Outrun with the power of a potato."
 source_repo = "https://github.com/VVelox/hugo-dusky-neon-potato.git"
-tags = ["Responsive", "Blog", "Google analytics", "Disqus", "Clean", "Tags", "Minimal", "Custom Themes", "Minimalist", "Simple", "Pink", "Green", "Starter", "Dark"]
-features = ["blog"]
+tags = ["Responsive", "Blog", "Google analytics", "Disqus", "Clean", "Tags", "Minimal", "Custom Themes", "Minimalist", "Simple", "Pink", "Green", "Starter", "Dark", "Sortable Tables"]
+features = ["blog", "sortable tables", "image zoom", "optional pagination"]
 min_version = 0.27
 [author]
     name = "Dusky Neon Potato"
     homepage = "https://github.com/VVelox/hugo-dusky-neon-potato"
+[original]
+    author="Suraj Mandal"
+    homepage="https://github.com/surajmandalcell/potato-dark"
+    repo="https://github.com/surajmandalcell/potato-dark.git"
