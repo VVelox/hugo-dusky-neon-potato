@@ -1,0 +1,34 @@
+---
+author: "VVelox"
+date: 2018-09-10
+title: Fun With Tables
+sort_tables: true
+---
+
+Below is a example of a sortable table in org mode.
+
+#+BEGIN_SRC
+| a | b | c          | d            | e |
+|---+---+------------+--------------+---|
+| 1 | f | 2017-03-14 | 127.0.0.1    |   |
+| 2 | b | 2018-02-14 | 192.168.15.2 |   |
+| 3 | e | 2017-03-15 | 192.168.1.1  |   |
+| 4 | d | 2012-03-14 | 10.10.10.10  | 3 |
+#+END_SRC
+
+Which results in table such as below.
+
+| a | b | c          | d            | e |
+|---+---+------------+--------------+---|
+| 1 | f | 2017-03-14 | 127.0.0.1    |   |
+| 2 | b | 2018-02-14 | 192.168.15.2 |   |
+| 3 | e | 2017-03-15 | 192.168.1.1  |   |
+| 4 | d | 2012-03-14 | 10.10.10.10  | 3 |
+
+By clicking on the table headers, you can change the sorting.
+
+This is enabled on a page by putting the following in the Front Matter.
+
+#+BEGIN_SRC
+sort_tables: true
+#+END_SRC
