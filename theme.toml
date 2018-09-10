@@ -7,5 +7,5 @@ tags = ["Responsive", "Blog", "Google analytics", "Disqus", "Clean", "Tags", "Mi
 features = ["blog"]
 min_version = 0.27
 [author]
-    name = "Potato Dark"
+    name = "Dusky Neon Potato"
     homepage = "https://github.com/VVelox/hugo-dusky-neon-potato"
