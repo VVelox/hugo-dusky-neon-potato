@@ -1,4 +1,4 @@
-# Potato Dark [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/surajmandalcell/potato-dark/blob/master/license.md) 
+# Dusky Neon Potato [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://raw.githubusercontent.com/VVelox/hugo-dusky-neon-potato/master/LICENSE.md)
 
 Outrun with the power of a potato. Based on the Potato Dark theme with CSS bits inspired by Dusk.
 
@@ -89,7 +89,7 @@ sort_tables: true
 
 ### Colors
 
-All colors stuff go under 
+All colors stuff go under
 
 ```
 [colors]
