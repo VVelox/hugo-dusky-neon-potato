@@ -1,6 +1,31 @@
-<div>
+<script>
 var chart = c3.generate({
     bindto: '{{ .Get "chart" }}',
+    data: {
+        {{ with .x }}
+         x: '{{.}}',
+        {{ end }}
+        url: '{{ .Get "url" }}',
+        type: '{{ .Get "type" }}'
+    }
+    {{ if (or ( isset .x-label )(or ( isset .y-label )( .y2-label ))) }}
+     ,axis: {
+         {{ with .x-label }}
+          x: {
+              label: '{{.}}'
+          }
+         {{ end }}
+         {{ if isset .y-label }},{{end}}
+         {{ with .y-label }}
+          x: {
+              label: '{{.}}'
+          }
+         {{ if isset .y2-label }},{{end}}
+         {{ with .y2-label }}
+          x: {
+              label: '{{.}}'
+          }
+     }
+    {{ end }}
 });
-</div>
-
+</script>
