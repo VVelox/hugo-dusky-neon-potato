@@ -39,12 +39,12 @@ Use short code for Image Zoom.
 
 ### Graphing
 
-To enable graphing, you first need to set 'graphing_enabled' to true in frontmatter
+To enable graphing, you first need to set 'graphing' to true in frontmatter
 as below. With out that, none of the shortcodes will work properly as the required
 CSS and JS will not be included in the header.
 
 ```
-graphing_enabled = true
+graphing = true
 ```
 
 ## Configuration
