@@ -17,22 +17,7 @@ Outrun with the power of a potato. Based on the Potato Dark theme with CSS bits 
 * Outrun inspired foreground colors on a dark background, by default.
 * Can turn off pagination.
 * The ability to enable sorting of tables for pages.
-
-Use short code for Image Zoom.
-
-```
-{{% zoom-img src="/images/default.jpg" %}}
-```
-
-## Installation
-
-cd your hugo site directory and run:
-
-```shell
-$ mkdir themes
-$ cd themes
-$ git submodule add https://github.com/VVelox/hugo-dusky-neon-potato.git dusky-neon-potato
-```
+* Graphing via [C3](https://c3js.org/).
 
 ## Usage
 
@@ -40,6 +25,26 @@ Use hugo's -t dusky-neon-potato or --theme=dusky-neon-potato option with hugo co
 
 ```shell
 $ hugo server -t dusky-neon-potato -w -D
+```
+
+## Shortcodes
+
+### Image Zoom
+
+Use short code for Image Zoom.
+
+```
+{{% zoom-img src="/images/default.jpg" %}}
+```
+
+### Graphing
+
+To enable graphing, you first need to set 'graphing_enabled' to true in frontmatter
+as below. With out that, none of the shortcodes will work properly as the required
+CSS and JS will not be included in the header.
+
+```
+graphing_enabled = true
 ```
 
 ## Configuration
@@ -87,9 +92,10 @@ sort_tables: true
 
 ```
 
-### Colors
+### Colors & Decorations
 
-All colors stuff go under
+All colors/decorations stuff go under the 'colors' config section. The
+defaults are shown below.
 
 ```
 [colors]
