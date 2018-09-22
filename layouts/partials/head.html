@@ -55,5 +55,9 @@
   {{ if .Params.sort_tables }}
   <script type="text/javascript" src="{{ .Site.BaseURL }}/js/sorttable.js"></script>
   {{ end }}
+  {{ if .Params.graphing }}
+  <script type="text/javascript" src="{{ .Site.BaseURL }}/js/c3.min.js"></script>
+  <script type="text/javascript" src="{{ .Site.BaseURL }}/js/d3.min.js"></script>
+  {{ end }}
   {{ partial "head_custom.html" . }}
 </head>
