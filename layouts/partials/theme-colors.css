@@ -276,3 +276,12 @@ blockquote {
     height: 5px;
     border: solid {{ .Param "colors.text" | default "#66FF00" }};
 }
+
+
+.c3 path, .c3 line {
+  stroke: {{ .Param "colors.graphLines" | default "#66FF00" }};
+}
+
+.c3 text {
+  stroke: {{ .Param "colors.graphText" | default "#FF00FF" }};
+}
