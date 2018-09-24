@@ -16,12 +16,12 @@ var chart = c3.generate({
           }
          {{ end }}
          {{ if isset .yLabel }},{{end}}
-         {{ with .y-label }}
+         {{ with .yLabel }}
           x: {
               label: '{{.}}'
           }
          {{ if isset .y2Label }},{{end}}
-         {{ with .y2-label }}
+         {{ with .y2Label }}
           x: {
               label: '{{.}}'
           }
