@@ -47,6 +47,48 @@ CSS and JS will not be included in the header.
 graphing: true
 ```
 
+Currently the possible charts that can be made with out issue are as below.
+
+* line
+* spline
+* bar
+* scatter
+* pie
+* donut
+
+Below is a example of creating a chart.
+
+```
+{{% chart-place chart="example" %}}
+
+{{% chart-generate url="https://foo.bar/c3_test.csv" type="line" chart="example" yLabel="Y1 label" xLabel="X label" %}}
+```
+
+Graphing is handled by [C3](https://c3js.org/) and you can find the documentation at https://c3js.org/reference.html .
+
+#### chart-place
+
+This short code places the HTML that the JS will bind to.
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| chart | chart | The name of the chart. |
+
+#### chart-generate
+
+This generates the chart and binds it to the HTML.
+
+| Variable | Default | Required | Description |
+| --- | --- | --- | --- |
+| chart | chart | no | The name of the chart. |
+| url | null | yes | The URL for the CSV. |
+| [type](https://c3js.org/reference.html#data-type) | line | no | The type of chart it is. |
+| [x](https://c3js.org/reference.html#data-x) | null | no | The column name to use for X axis info. |
+| xLabel | null | no | The label for the X axis. |
+| yLabel | null | no | The label for the Y axis. |
+
+Please note that while C3 supports area and gauge, this currently lacks support for those.
+
 ## Configuration
 
 ### Disable Pagination
