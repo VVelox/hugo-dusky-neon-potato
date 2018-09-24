@@ -1,30 +1,33 @@
 <script>
 var chart = c3.generate({
-    bindto: '{{ .Get "chart" }}',
+    bindto: '#{{ .Get "chart" }}',
     data: {
-        {{ with .x }}
+        {{ with .Get "x" }}
          x: '{{.}}',
         {{ end }}
         url: '{{ .Get "url" }}',
         type: '{{ .Get "type" }}'
     }
-    {{ if (or ( isset .xLabel )(or ( isset .yLabel )( .y2Label ))) }}
+    {{ if or (isset .Params "xLabel") (or (isset .Params "yLabel") (isset .Params "y2Label") ) }}
      ,axis: {
-         {{ with .xLabel }}
+         {{ with .Get "xLabel" }}
           x: {
               label: '{{.}}'
           }
          {{ end }}
-         {{ if isset .yLabel }},{{end}}
-         {{ with .yLabel }}
-          x: {
+         {{ if isset .Params "yLabel" }},{{end}}
+         {{ with .Get "yLabel" }}
+          y: {
               label: '{{.}}'
           }
-         {{ if isset .y2Label }},{{end}}
-         {{ with .y2Label }}
-          x: {
+         {{ end }}
+         {{ if isset .Params "y2Label" }},{{end}}
+         {{ with .Get "y2Label" }}
+          y2: {
+              show: true,
               label: '{{.}}'
           }
+          {{ end }}
      }
     {{ end }}
 });
