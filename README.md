@@ -44,7 +44,7 @@ as below. With out that, none of the shortcodes will work properly as the requir
 CSS and JS will not be included in the header.
 
 ```
-graphing = true
+graphing: true
 ```
 
 ## Configuration
@@ -60,7 +60,7 @@ display.
 title: "About"
 date: 2018-09-02T22:41:40-05:00
 draft: false
-no_pagination = true
+no_pagination: true
 ---
 
 A rutting about page.
@@ -135,4 +135,9 @@ defaults are shown below.
 	# related items(at the cottom of posts)
 	related-bg="#101010"
 	related-fg="#66FF00"
+
+	# graph axis
+	graph-lines="#66FF00"
+	# text on the graphs
+	graph-text="#FF00FF"
 ```

@@ -279,9 +279,9 @@ blockquote {
 
 
 .c3 path, .c3 line {
-  stroke: {{ .Param "colors.graphLines" | default "#66FF00" }};
+  stroke: {{ .Param "colors.graph-lines" | default "#66FF00" }};
 }
 
 .c3 text {
-  stroke: {{ .Param "colors.graphText" | default "#FF00FF" }};
+  stroke: {{ .Param "colors.grap-text" | default "#FF00FF" }};
 }
