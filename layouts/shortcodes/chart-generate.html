@@ -8,19 +8,19 @@ var chart = c3.generate({
         url: '{{ .Get "url" }}',
         type: '{{ .Get "type" }}'
     }
-    {{ if (or ( isset .x-label )(or ( isset .y-label )( .y2-label ))) }}
+    {{ if (or ( isset .xLabel )(or ( isset .yLabel )( .y2Label ))) }}
      ,axis: {
-         {{ with .x-label }}
+         {{ with .xLabel }}
           x: {
               label: '{{.}}'
           }
          {{ end }}
-         {{ if isset .y-label }},{{end}}
+         {{ if isset .yLabel }},{{end}}
          {{ with .y-label }}
           x: {
               label: '{{.}}'
           }
-         {{ if isset .y2-label }},{{end}}
+         {{ if isset .y2Label }},{{end}}
          {{ with .y2-label }}
           x: {
               label: '{{.}}'
