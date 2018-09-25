@@ -55,6 +55,7 @@ Currently the possible charts that can be made with out issue are as below.
 * scatter
 * pie
 * donut
+* gauge
 
 Below is a example of creating a chart.
 
@@ -92,6 +93,13 @@ This generates the chart and binds it to the HTML.
 | [grid-x-show](https://c3js.org/samples/options_gridline.html) | null | no | If the X grid should be shown. Set to 'true' to enable. |
 | [grid-y-show](https://c3js.org/samples/options_gridline.html) | null | no | If the X grid should be shown. Set to 'true' to enable. |
 | [legend-hide](https://c3js.org/samples/options_legend.html) | null | no | If defined, this hides the legend. |
+| [zoom-enable](https://c3js.org/samples/interaction_zoom.html) | null | no | If defined, this enables zooming. |
+| [zoom-rescale](https://c3js.org/reference.html#zoom-rescale) | null | no | If defined, this enables rescaling when zooming. |
+| [subchart-enable](https://c3js.org/samples/options_subchart.html) | null | no | If defined, this enables shows a sub chart, which can be useful when zooming. |
+| [subchart-size](https://c3js.org/reference.html#subchart-size-height) | null | no | Used for setting a custom subchart size. |
+| [size-height](https://c3js.org/samples/options_size.html) | null | no | Set a specific height for the chart. |
+| [size-width](https://c3js.org/samples/options_size.html) | null | no | Set a specific height for the chart. |
+
 
 Please note that while C3 supports area and gauge, this currently lacks support for those.
 
@@ -223,3 +231,8 @@ defaults are shown below.
 	# text on the graphs
 	graph-text="#FF00FF"
 ```
+
+## TODO
+
+* Implement more settings for gauge graph type.
+* Add more axis options.

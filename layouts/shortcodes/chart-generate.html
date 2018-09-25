@@ -51,5 +51,22 @@ var chart = c3.generate({
 	,legend: {
 		{{ with .Get "legend-hide" }}show: false{{ end }}
 	}
+	,zoom: {
+		{{ if isset .Params "zoom-enable" }}
+			enabled: true
+			{{ with .Get "zoom-rescale" }},rescale: true{{ end }}
+		{{ end }}
+	}
+	,subchart: {
+		{{ if isset .Params "subchart-enable" }}
+			show: true
+			{{ with .Get "subchart-size" }},size: { height: '{{.}}' }{{ end }}
+		{{ end }}
+	}
+	,size: {
+		{{ with .Get "size-height" }}height: '{{.}}'{{ end }}
+		{{ if and ( isset .Params "size-width" ) ( isset .Params "size-height" ) }},{{ end }}
+		{{ with .Get "size-width" }}width: '{{.}}'{{ end }}
+	}
 });
 </script>
