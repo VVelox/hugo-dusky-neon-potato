@@ -18,6 +18,7 @@ Outrun with the power of a potato. Based on the Potato Dark theme with CSS bits 
 * Can turn off pagination.
 * The ability to enable sorting of tables for pages.
 * Graphing via [C3](https://c3js.org/).
+* Can set a page to refresh via Front Matter.
 
 ## Usage
 
@@ -231,6 +232,27 @@ defaults are shown below.
 	# text on the graphs
 	graph-text="#FF00FF"
 ```
+
+### Page Auto-Refresh
+
+Pages can be told to auto refresh via setting the Front Matter variable 'page_refresh'. This is
+number of seconds between page refreshes.
+
+The use case for this would be if you are using graphing and have data that updates periodically
+want to update the page every 5 minutes or so to pull in the changes.
+
+```
+---
+title: "Auto-Refreshing"
+date: 2018-09-02T22:41:40-05:00
+draft: false
+page_refresh: 300
+---
+
+This page will refresh every 5 minutes.
+
+```
+
 
 ## TODO
 
