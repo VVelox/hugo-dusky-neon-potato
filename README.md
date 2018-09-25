@@ -80,14 +80,54 @@ This generates the chart and binds it to the HTML.
 
 | Variable | Default | Required | Description |
 | --- | --- | --- | --- |
-| chart | chart | no | The name of the chart. |
-| url | null | yes | The URL for the CSV. |
+| [chart](https://c3js.org/reference.html#bindto) | chart | no | The name of the chart. |
+| [url](https://c3js.org/reference.html#data-url) | null | yes | The URL for the CSV. |
 | [type](https://c3js.org/reference.html#data-type) | line | no | The type of chart it is. |
 | [x](https://c3js.org/reference.html#data-x) | null | no | The column name to use for X axis info. |
-| xLabel | null | no | The label for the X axis. |
-| yLabel | null | no | The label for the Y axis. |
+| [xLabel](https://c3js.org/reference.html#axis-x-label) | null | no | The label for the X axis. |
+| [yLabel](https://c3js.org/reference.html#axis-y-label) | null | no | The label for the Y axis. |
+| [xType](https://c3js.org/reference.html#axis-x-type) | null | no | The type of data for the X axis. |
+| [xFormat](https://c3js.org/reference.html#axis-x-tick-format) | null | no | The format for the X ticks, largely for use if xType is set to 'timeseries'. |
+| [axis-rotated](https://c3js.org/reference.html#axis-rotated) | null | no | If X and Y should be reversed. |
+| [grid-x-show](https://c3js.org/samples/options_gridline.html) | null | no | If the X grid should be shown. Set to 'true' to enable. |
+| [grid-y-show](https://c3js.org/samples/options_gridline.html) | null | no | If the X grid should be shown. Set to 'true' to enable. |
+| [legend-hide](https://c3js.org/samples/options_legend.html) | null | no | If defined, this hides the legend. |
 
 Please note that while C3 supports area and gauge, this currently lacks support for those.
+
+#### chart-generate-raw
+
+As to how to start using this, it is highly started reading https://c3js.org/gettingstarted.html .
+
+| Variable | Default | Required | Description |
+| --- | --- | --- | --- |
+| raw | null | yes | The raw inner JSON for c3.generate. |
+
+
+```
+{{% chart-generate-raw raw="bindto: '#chart',
+    data: {
+      columns: [
+        ['data1', 30, 200, 100, 400, 150, 250],
+        ['data2', 50, 20, 10, 40, 15, 25]
+      ]
+    }"
+%}}
+```
+
+is the equivalent of this...
+
+```
+var chart = c3.generate({
+    bindto: '#chart',
+    data: {
+      columns: [
+        ['data1', 30, 200, 100, 400, 150, 250],
+        ['data2', 50, 20, 10, 40, 15, 25]
+      ]
+    }
+});
+```
 
 ## Configuration
 
