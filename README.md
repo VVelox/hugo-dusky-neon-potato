@@ -40,7 +40,7 @@ Use short code for Image Zoom.
 
 ### Graphing
 
-To enable graphing, you first need to set 'graphing' to true in frontmatter
+To enable graphing, you first need to set 'graphing' to true in Front Matter
 as below. With out that, none of the shortcodes will work properly as the required
 CSS and JS will not be included in the header.
 
@@ -258,3 +258,4 @@ This page will refresh every 5 minutes.
 
 * Implement more settings for gauge graph type.
 * Add more axis options.
+* Make the nearly invisible black triangles the show up on the graph in some modes disappear.
