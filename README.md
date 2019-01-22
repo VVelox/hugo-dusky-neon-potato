@@ -18,6 +18,7 @@ Outrun with the power of a potato. Based on the Potato Dark theme with CSS bits 
 * Can turn off pagination.
 * The ability to enable sorting of tables for pages.
 * Graphing via [C3](https://c3js.org/).
+* Can set a page to refresh via Front Matter.
 
 ## Usage
 
@@ -39,12 +40,102 @@ Use short code for Image Zoom.
 
 ### Graphing
 
-To enable graphing, you first need to set 'graphing' to true in frontmatter
+To enable graphing, you first need to set 'graphing' to true in Front Matter
 as below. With out that, none of the shortcodes will work properly as the required
 CSS and JS will not be included in the header.
 
 ```
 graphing: true
+```
+
+Currently the possible charts that can be made with out issue are as below.
+
+* line
+* spline
+* bar
+* scatter
+* pie
+* donut
+* gauge
+
+Below is a example of creating a chart.
+
+```
+{{% chart-place chart="example" %}}
+
+{{% chart-generate url="https://foo.bar/c3_test.csv" type="line" chart="example" yLabel="Y1 label" xLabel="X label" %}}
+```
+
+Graphing is handled by [C3](https://c3js.org/) and you can find the documentation at https://c3js.org/reference.html .
+
+#### chart-place
+
+This short code places the HTML that the JS will bind to.
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| chart | chart | The name of the chart. |
+
+#### chart-generate
+
+This generates the chart and binds it to the HTML.
+
+| Variable | Default | Required | Description |
+| --- | --- | --- | --- |
+| [chart](https://c3js.org/reference.html#bindto) | chart | no | The name of the chart. |
+| [url](https://c3js.org/reference.html#data-url) | null | yes | The URL for the CSV. |
+| [type](https://c3js.org/reference.html#data-type) | line | no | The type of chart it is. |
+| [x](https://c3js.org/reference.html#data-x) | null | no | The column name to use for X axis info. |
+| [xLabel](https://c3js.org/reference.html#axis-x-label) | null | no | The label for the X axis. |
+| [yLabel](https://c3js.org/reference.html#axis-y-label) | null | no | The label for the Y axis. |
+| [xType](https://c3js.org/reference.html#axis-x-type) | null | no | The type of data for the X axis. |
+| [xFormat](https://c3js.org/reference.html#axis-x-tick-format) | null | no | The format for the X ticks, largely for use if xType is set to 'timeseries'. |
+| [axis-rotated](https://c3js.org/reference.html#axis-rotated) | null | no | If X and Y should be reversed. |
+| [grid-x-show](https://c3js.org/samples/options_gridline.html) | null | no | If the X grid should be shown. Set to 'true' to enable. |
+| [grid-y-show](https://c3js.org/samples/options_gridline.html) | null | no | If the X grid should be shown. Set to 'true' to enable. |
+| [legend-hide](https://c3js.org/samples/options_legend.html) | null | no | If defined, this hides the legend. |
+| [zoom-enable](https://c3js.org/samples/interaction_zoom.html) | null | no | If defined, this enables zooming. |
+| [zoom-rescale](https://c3js.org/reference.html#zoom-rescale) | null | no | If defined, this enables rescaling when zooming. |
+| [subchart-enable](https://c3js.org/samples/options_subchart.html) | null | no | If defined, this enables shows a sub chart, which can be useful when zooming. |
+| [subchart-size](https://c3js.org/reference.html#subchart-size-height) | null | no | Used for setting a custom subchart size. |
+| [size-height](https://c3js.org/samples/options_size.html) | null | no | Set a specific height for the chart. |
+| [size-width](https://c3js.org/samples/options_size.html) | null | no | Set a specific height for the chart. |
+
+
+Please note that while C3 supports area and gauge, this currently lacks support for those.
+
+#### chart-generate-raw
+
+As to how to start using this, it is highly started reading https://c3js.org/gettingstarted.html .
+
+| Variable | Default | Required | Description |
+| --- | --- | --- | --- |
+| raw | null | yes | The raw inner JSON for c3.generate. |
+
+
+```
+{{% chart-generate-raw raw="bindto: '#chart',
+    data: {
+      columns: [
+        ['data1', 30, 200, 100, 400, 150, 250],
+        ['data2', 50, 20, 10, 40, 15, 25]
+      ]
+    }"
+%}}
+```
+
+is the equivalent of this...
+
+```
+var chart = c3.generate({
+    bindto: '#chart',
+    data: {
+      columns: [
+        ['data1', 30, 200, 100, 400, 150, 250],
+        ['data2', 50, 20, 10, 40, 15, 25]
+      ]
+    }
+});
 ```
 
 ## Configuration
@@ -141,3 +232,30 @@ defaults are shown below.
 	# text on the graphs
 	graph-text="#FF00FF"
 ```
+
+### Page Auto-Refresh
+
+Pages can be told to auto refresh via setting the Front Matter variable 'page_refresh'. This is
+number of seconds between page refreshes.
+
+The use case for this would be if you are using graphing and have data that updates periodically
+want to update the page every 5 minutes or so to pull in the changes.
+
+```
+---
+title: "Auto-Refreshing"
+date: 2018-09-02T22:41:40-05:00
+draft: false
+page_refresh: 300
+---
+
+This page will refresh every 5 minutes.
+
+```
+
+
+## TODO
+
+* Implement more settings for gauge graph type.
+* Add more axis options.
+* Make the nearly invisible black triangles the show up on the graph in some modes disappear.

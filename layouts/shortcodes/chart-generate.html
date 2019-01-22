@@ -1,34 +1,72 @@
 <script>
 var chart = c3.generate({
-    bindto: '#{{ .Get "chart" }}',
-    data: {
-        {{ with .Get "x" }}
-         x: '{{.}}',
-        {{ end }}
-        url: '{{ .Get "url" }}',
-        type: '{{ .Get "type" }}'
+	bindto: '#{{ .Get "chart" | default "chart" }}',
+	data: {
+		{{ with .Get "x" }}
+			x: '{{.}}',
+		{{ end }}
+		url: '{{ .Get "url" }}',
+	type: '{{ .Get "type" | default "line" }}'
+	}
+	,axis: {
+		x: {
+			label: '{{ with .Get "xLabel" }}{{.}}{{ end }}'
+
+			{{ with .Get "xType" }}
+				,type: '{{.}}'
+			{{ end }}
+
+			{{ with .Get "xFormat" }}
+				,tick: {
+					format: '{{.}}'
+				}
+			{{ end }}
+		}
+
+		{{ with .Get "yLabel" }}
+			,y: {
+				label: '{{.}}'
+			}
+		{{ end }}
+
+		{{ with .Get "y2Label" }}
+			,y2: {
+				show: true,
+				label: '{{.}}'
+			}
+		{{ end }}
+
+		{{ with .Get "axis-rotated" }}
+			,rotated: '{{.}}'
+		{{ end }}
     }
-    {{ if or (isset .Params "xLabel") (or (isset .Params "yLabel") (isset .Params "y2Label") ) }}
-     ,axis: {
-         {{ with .Get "xLabel" }}
-          x: {
-              label: '{{.}}'
-          }
-         {{ end }}
-         {{ if isset .Params "yLabel" }},{{end}}
-         {{ with .Get "yLabel" }}
-          y: {
-              label: '{{.}}'
-          }
-         {{ end }}
-         {{ if isset .Params "y2Label" }},{{end}}
-         {{ with .Get "y2Label" }}
-          y2: {
-              show: true,
-              label: '{{.}}'
-          }
-          {{ end }}
-     }
-    {{ end }}
+	,grid: {
+		x: {
+			{{ with .Get "grid-x-show" }}show: '{{.}}'{{ end }}
+		},
+		y: {
+			{{ with .Get "grid-y-show" }}show: '{{.}}'{{ end }}
+		}
+	}
+	,legend: {
+		{{ with .Get "legend-hide" }}show: false{{ end }}
+	}
+	,zoom: {
+		{{ if isset .Params "zoom-enable" }}
+			enabled: true
+			{{ with .Get "zoom-rescale" }},rescale: true{{ end }}
+		{{ end }}
+	}
+	,subchart: {
+		{{ if isset .Params "subchart-enable" }}
+			show: true
+			{{ with .Get "subchart-size" }},size: { height: '{{.}}' }{{ end }}
+		{{ end }}
+	}
+	,size: {
+		{{ with .Get "size-height" }}height: '{{.}}'{{ end }}
+		{{ if and ( isset .Params "size-width" ) ( isset .Params "size-height" ) }},{{ end }}
+		{{ with .Get "size-width" }}width: '{{.}}'{{ end }}
+	}
 });
 </script>

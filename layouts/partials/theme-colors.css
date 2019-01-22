@@ -278,10 +278,16 @@ blockquote {
 }
 
 
+/* C3 overrides so bits are not invisible */
+
 .c3 path, .c3 line {
   stroke: {{ .Param "colors.graph-lines" | default "#66FF00" }};
 }
 
 .c3 text {
   stroke: {{ .Param "colors.grap-text" | default "#FF00FF" }};
+}
+
+.c3-tooltip td {
+  background-color: {{ .Param "colors.background" | default "#101010" }};
 }

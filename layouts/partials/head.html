@@ -59,5 +59,8 @@
   <script type="text/javascript" src="{{ .Site.BaseURL }}/js/c3.min.js"></script>
   <script type="text/javascript" src="{{ .Site.BaseURL }}/js/d3.min.js"></script>
   {{ end }}
+  {{ with .Params.page_refresh }}
+  <meta http-equiv="refresh" content="{{.}}">
+  {{ end }}
   {{ partial "head_custom.html" . }}
 </head>

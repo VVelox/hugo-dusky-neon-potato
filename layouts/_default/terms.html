@@ -1,11 +1,10 @@
 {{ partial "header.html" . }}
-{{ $baseurl := .Site.BaseURL | sanitizeurl }}
 <section>
   <h2>{{ .Title }}</h2>
   <ul>
     {{ $data := .Data }}
-    {{ range $key, $value := .Data.Terms }}
-    <li><a href="{{ $baseurl }}/{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> ({{ len $value }})</li>
+    {{ range $key, $value := .Data.Terms.Alphabetical }}
+    <li><a href="{{ $value.Name | urlize }}">{{ $value.Name }} ({{ $value.WeightedPages.Count }})</a></li>
     {{ end }}
   </ul>
 </section>
