@@ -4,6 +4,8 @@ Title = "Your site title"
 # Copyright notice. This is displayer in the footer.
 copyright = "&copy; Copyright notice"
 
+theme = "hugo-dusky-neon-potato"
+
 [params]
   paginate = 10
   # Social accounts. Link to these accounts are displayed in the header and
