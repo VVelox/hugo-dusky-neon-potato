@@ -25,7 +25,7 @@ Outrun with the power of a potato. Based on the Potato Dark theme with CSS bits 
 Use hugo's -t dusky-neon-potato or --theme=dusky-neon-potato option with hugo commands. Example:
 
 ```shell
-$ hugo server -t dusky-neon-potato -w -D
+$ hugo server -t hugo-dusky-neon-potato -w -D
 ```
 
 ## Shortcodes
