@@ -48,7 +48,7 @@
   {{- with .Site.Params.favicon }}
   <link rel='icon' type='image/x-icon' href="{{ . | absURL }}" />
   {{- end -}}
-  {{ if eq .URL "/" }}
+  {{ if eq (.Permalink | string) "/" }}
   <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
   {{ end }}
   <script type="text/javascript" src="{{ .Site.BaseURL }}/js/bundle.js"></script>

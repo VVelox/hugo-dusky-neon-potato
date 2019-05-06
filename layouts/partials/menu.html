@@ -7,7 +7,7 @@
           <span>{{ .Name }}</span>
           <ul>
             {{ range .Children }}
-              <li class="p-menu__listitem p-menu__child"><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+              <li class="p-menu__listitem p-menu__child"><a href="{{ .URL | relLangURL  }}">{{ .Name }}</a></li>
             {{ end }}
           </ul>
         </li>
