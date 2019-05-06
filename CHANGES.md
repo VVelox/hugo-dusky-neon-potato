@@ -3,6 +3,7 @@
 * Add graphing support via [C3.js](https://c3js.org/).
 * Add page level auto-refresh support.
 * Fix misc issues with tag URL rendering.
+* Update various bits that are being deprciated.
 
 # 2018-09-10/0.0.0
 
