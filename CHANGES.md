@@ -1,4 +1,4 @@
-# 2018-09-?/0.1.0
+# 2019-05-06/0.1.0
 
 * Add graphing support via [C3.js](https://c3js.org/).
 * Add page level auto-refresh support.
