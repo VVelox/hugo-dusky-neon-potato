@@ -37,7 +37,7 @@
   <meta property="og:type" content="website" />
   {{ end }}
   <!-- Hugo Version number -->
-  {{ .Hugo.Generator -}}
+  {{ hugo.Generator -}}
   {{ if .Site.Params.FontSheetUse }}
     <link href="{{ .Site.Params.FontSheet | default "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" }}" rel="stylesheet">
   {{- end -}}
