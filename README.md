@@ -104,31 +104,30 @@ This generates the chart and binds it to the HTML.
 
 Please note that while C3 supports area and gauge, this currently lacks support for those.
 
-#### chart-generate-raw
+#### chart-complex-start / chart-complex-stop
 
 As to how to start using this, it is highly started reading https://c3js.org/gettingstarted.html .
 
 | Variable | Default | Required | Description |
 | --- | --- | --- | --- |
-| raw | null | yes | The raw inner JSON for c3.generate. |
-
+| chart | chart | no | The name of the chart to bind to. |
 
 ```
-{{% chart-generate-raw raw="bindto: '#chart',
+{{% chart-complex-start chart="foo" %}}
     data: {
       columns: [
         ['data1', 30, 200, 100, 400, 150, 250],
         ['data2', 50, 20, 10, 40, 15, 25]
       ]
     }"
-%}}
+{{% chart-complex-stop %}}
 ```
 
 is the equivalent of this...
 
 ```
 var chart = c3.generate({
-    bindto: '#chart',
+    bindto: '#foo',
     data: {
       columns: [
         ['data1', 30, 200, 100, 400, 150, 250],
