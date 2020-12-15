@@ -222,7 +222,7 @@ defaults are shown below.
 	# color of the tags title on that tags page
 	p-tag-title="#FF1493"
 
-	# related items(at the cottom of posts)
+	# related items(at the bottom of posts)
 	related-bg="#101010"
 	related-fg="#66FF00"
 
